@@ -1,10 +1,15 @@
- import React, { useState } from 'react';
+ import React, { useEffect, useRef, useState } from 'react';
 import "./chat.css";
 import EmojiPciker from "emoji-picker-react"
 
 const Chat = () => {
   const [open, setOpen] = useState(false);
-  const [text, setText] = useState("")
+  const [text, setText] = useState("");
+  const endRef = useRef(null);
+
+  useEffect(() => {
+    endRef.current?.scrollIntoView({ behavior: "smooth" })
+  },[]);
   
   const handleEmoji = (e) => {
     setText((prev)=> prev + e.emoji);
@@ -77,7 +82,7 @@ const Chat = () => {
           </div>
         </div>
 
-
+        <div ref={endRef}> </div>
       </div>
 
     
