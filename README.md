@@ -22,8 +22,8 @@ A modern chat application built with React that leverages Firebase for user auth
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/react-chat-app.git
-   cd react-chat-app
+   git clone https://github.com/Alotab/react-firebase-chat.git
+   cd react-firebase-chat
    ```
 
 2. **Install dependencies**:
